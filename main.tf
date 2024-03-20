@@ -5,7 +5,7 @@ provider "azurerm" {
 }
 
 variable "prefix" {
-  default = "tfvmex"
+  default = "tfvmex2"
 }
 
 resource "azurerm_resource_group" "example" {
