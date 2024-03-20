@@ -1,3 +1,9 @@
+provider "azurerm" {
+  features {
+    
+  }
+}
+
 variable "prefix" {
   default = "tfvmex"
 }
