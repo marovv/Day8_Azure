@@ -10,7 +10,7 @@ variable "prefix" {
 
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-resources"
-  location = "West Europe"
+  location = "UK South"
 }
 
 resource "azurerm_virtual_network" "main" {
@@ -44,7 +44,7 @@ resource "azurerm_virtual_machine" "main" {
   location              = azurerm_resource_group.example.location
   resource_group_name   = azurerm_resource_group.example.name
   network_interface_ids = [azurerm_network_interface.main.id]
-  vm_size               = "B2pts_v2"
+  vm_size               = "B2ats_v2"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   delete_os_disk_on_termination = true
